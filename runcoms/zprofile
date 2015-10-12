@@ -5,6 +5,10 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+if [[ "$OSTYPE" == msys ]]; then
+  export SHELL=zsh
+fi
+
 #
 # Browser
 #
@@ -17,8 +21,8 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='emacsclient'
+export VISUAL='emacsclient'
 export PAGER='less'
 
 #

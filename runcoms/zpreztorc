@@ -92,7 +92,7 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 if [[ "$OSTYPE" == msys ]]; then
-  zstyle ':prezto:module:prompt' theme 'fade'
+  zstyle ':prezto:module:prompt' theme 'sorin'
 else
   zstyle ':prezto:module:prompt' theme 'powerlevel9k'
 fi
@@ -165,3 +165,7 @@ fi
 
 # Integrate with iTerm2.
 # zstyle ':prezto:module:tmux:iterm' integrate 'yes'
+
+if [[ "$OSTYPE" == msys ]]; then
+   zstyle ':completion:*' fake-files   '/:c' '/:d' '/:e' '/:x' '/:y' '/:z'
+fi

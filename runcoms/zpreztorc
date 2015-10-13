@@ -164,7 +164,9 @@ fi
 # zstyle ':prezto:module:tmux:auto-start' remote 'yes'
 
 # Integrate with iTerm2.
-# zstyle ':prezto:module:tmux:iterm' integrate 'yes'
+if [[ "$OSTYPE" == darwin* ]]; then
+   zstyle ':prezto:module:tmux:iterm' integrate 'yes'
+fi
 
 if [[ "$OSTYPE" == msys ]]; then
    zstyle ':completion:*' fake-files   '/:c' '/:d' '/:e' '/:x' '/:y' '/:z'

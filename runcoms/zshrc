@@ -24,3 +24,5 @@ if [[ "$OSTYPE" == darwin* ]]; then
   # setup thefuck
   eval "$(thefuck --alias)"
 fi
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)

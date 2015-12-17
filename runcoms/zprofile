@@ -6,7 +6,7 @@
 #
 
 if [[ "$OSTYPE" == msys ]]; then
-  export SHELL=zsh
+  export SHELL=/usr/bin/zsh
 fi
 
 #
@@ -21,8 +21,9 @@ fi
 # Editors
 #
 
+export ALTERNATE_EDITOR='emacs'
 export EDITOR='emacsclient'
-export VISUAL='emacsclient'
+export VISUAL='atom -nw'
 export PAGER='less'
 
 #

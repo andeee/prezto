@@ -24,3 +24,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
 
 fpath=("${ZDOTDIR:-$HOME}/.zcustom/functions" $fpath)
 autoload -U ${ZDOTDIR:-$HOME}/.zcustom/functions/*(:t)
+
+if [[ "$OSTYPE" == msys ]]; then
+  alias scoop="powershell -noprofile -ex unrestricted scoop.ps1"
+fi

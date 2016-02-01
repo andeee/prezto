@@ -22,8 +22,13 @@ fi
 #
 
 export ALTERNATE_EDITOR='emacs'
-export EDITOR='emacsclient'
-export VISUAL='atom -nw'
+if [[ "$OSTYPE" == msys ]]; then
+  export EDITOR='emacsclientw'
+  export VISUAL='emacsclientw'  
+else
+  export EDITOR='emacsclient'
+  export VISUAL='emacsclient'
+fi
 export PAGER='less'
 
 #

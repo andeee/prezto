@@ -28,3 +28,5 @@ autoload -U ${ZDOTDIR:-$HOME}/.zcustom/functions/*(:t)
 if [[ "$OSTYPE" == msys ]]; then
   alias scoop="powershell -noprofile -ex unrestricted scoop.ps1"
 fi
+
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
